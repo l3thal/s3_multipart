@@ -43,7 +43,7 @@ Next, install the gem, and add it to your gemfile.
 gem install s3_multipart
 ```
 
-Run the included generator to create the required migrations and configuration files. Make sure to migrate after performing this step.
+Run the included generator to create the required migrations and configuration files.
 
 ```bash
 rails g s3_multipart:install
@@ -89,7 +89,7 @@ $(function() {
 
 This piece of code does some configuration and provides various callbacks that you can hook into. It will be discussed further at the end of the Getting Started guide below.
 
-Finally, edit the aws.yml that was created in your config folder with the correct credentials for each environment. Set the revision number to the current version number. If breaking changes are made to the gem in a later version, then you will be notified when the two versions do not match in the log.
+Finally, edit the aws.yml that was created in your config folder with the correct credentials for each environment. Set the revision number to the current version number. If breaking changes are made to the gem in a later version, then you will be notified when the two versions do not match in the log. Add the current version as revision and run `rake db:migrate`
 
 ```yaml
 development:
